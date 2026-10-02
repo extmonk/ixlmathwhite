@@ -1,9 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremimi</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Cyberpunk purple/neon gradient background */
+            background: linear-gradient(135deg, #0d001a 0%, #1a0033 40%, #3d0066 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #fff;
+            /* Cyberpunk pink neon glow effect */
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+            margin-bottom: 50px;
+        }
+
+        /* 3-column grid layout for desktop, auto-adjusts for mobile */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* Cyberpunk style game cards */
+        .game-card {
+            background: rgba(20, 0, 35, 0.6);
+            border: 2px solid #ff007f;
+            border-radius: 8px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Alternate card borders with neon cyan for a true cyberpunk mix */
+        .game-card:nth-child(even) {
+            border-color: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+
+        /* Glow effect when hovering over the placeholders */
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.6);
+            cursor: pointer;
+        }
+
+        .game-card:nth-child(even):hover {
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+        }
+
+        .game-card span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff007f;
+            text-shadow: 0 0 5px rgba(255, 0, 127, 0.5);
+        }
+
+        .game-card:nth-child(even) span {
+            color: #00ffff;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World! Welcome to my site.</h1>
+
+    <h1>Jeremimi</h1>
+
+    <div class="grid-container">
+        <div class="game-card"><span>Game 1</span></div>
+        <div class="game-card"><span>Game 2</span></div>
+        <div class="game-card"><span>Game 3</span></div>
+        <div class="game-card"><span>Game 4</span></div>
+        <div class="game-card"><span>Game 5</span></div>
+        <div class="game-card"><span>Game 6</span></div>
+    </div>
+
 </body>
 </html>
